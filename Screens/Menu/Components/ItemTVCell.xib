@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="161" id="Ghf-w6-d75" customClass="ItemTVCell" customModule="PIZZA_TEST" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ghf-w6-d75" id="Cuk-qi-hfF">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="ITY-QO-rOa">
+                        <rect key="frame" x="174" y="32" width="224" height="102"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пицца из половинок" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZE-XW-ohG">
+                                <rect key="frame" x="53" y="0.0" width="171" height="20.333333333333332"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="5vY-qx-I7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Соберите свою пиццу 35 см с двумя разными вкусами" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYn-bY-NAe">
+                                <rect key="frame" x="16.333333333333343" y="27.333333333333339" width="207.66666666666666" height="33.666666666666657"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="210" id="pAm-j3-M9D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AIY-Lo-mxI">
+                                <rect key="frame" x="144" y="68" width="80" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="3Ov-vu-dcG"/>
+                                </constraints>
+                                <state key="normal" title="Собрать"/>
+                            </button>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="RAS-la-gO5">
+                        <rect key="frame" x="16" y="16" width="142" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="142" id="Rjg-od-oQM"/>
+                            <constraint firstAttribute="height" constant="128" id="Yru-N7-dsY"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ITY-QO-rOa" firstAttribute="top" secondItem="Cuk-qi-hfF" secondAttribute="top" constant="32" id="1Yi-Eg-KaZ"/>
+                    <constraint firstItem="ITY-QO-rOa" firstAttribute="leading" secondItem="RAS-la-gO5" secondAttribute="trailing" constant="16" id="3vh-qW-hub"/>
+                    <constraint firstItem="RAS-la-gO5" firstAttribute="top" secondItem="Cuk-qi-hfF" secondAttribute="top" constant="16" id="4bG-8r-Mbz"/>
+                    <constraint firstAttribute="trailing" secondItem="ITY-QO-rOa" secondAttribute="trailing" constant="16" id="hcO-iV-Coo"/>
+                    <constraint firstItem="RAS-la-gO5" firstAttribute="leading" secondItem="Cuk-qi-hfF" secondAttribute="leading" constant="16" id="jut-7e-akC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="KYn-bY-NAe" id="oIN-0U-k5c"/>
+                <outlet property="mainButton" destination="AIY-Lo-mxI" id="BA6-UV-kAU"/>
+                <outlet property="pizzaImage" destination="RAS-la-gO5" id="gap-5I-QLA"/>
+                <outlet property="titleLabel" destination="cZE-XW-ohG" id="dlQ-tL-Qmp"/>
+            </connections>
+            <point key="canvasLocation" x="-52.173913043478265" y="-35.15625"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="placeholder" width="512" height="512"/>
+    </resources>
+</document>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" ambiguous="YES" id="y8o-0A-trR" customClass="TabBar" customModule="PIZZA_TEST" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nER-13-3ws">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Vif-4q-YWb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    </view>
+                    <blurEffect style="extraLight"/>
+                </visualEffectView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-shadow-bottom" translatesAutoresizingMaskIntoConstraints="NO" id="HVv-Uh-tpp">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="RHm-tk-eFo"/>
+                    </constraints>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="ZbU-le-IW0">
+                    <rect key="frame" x="0.0" y="-34" width="414" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="kel-hm-ovu"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="9Yr-G3-NQb"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="nER-13-3ws" firstAttribute="leading" secondItem="9Yr-G3-NQb" secondAttribute="leading" id="1K2-Ve-XD3"/>
+                <constraint firstAttribute="top" secondItem="nER-13-3ws" secondAttribute="top" id="2LI-yw-pn4"/>
+                <constraint firstItem="ZbU-le-IW0" firstAttribute="top" secondItem="y8o-0A-trR" secondAttribute="top" id="3ZF-qb-Ro6"/>
+                <constraint firstItem="nER-13-3ws" firstAttribute="height" secondItem="y8o-0A-trR" secondAttribute="height" id="3dN-dI-Xsb"/>
+                <constraint firstItem="HVv-Uh-tpp" firstAttribute="top" secondItem="y8o-0A-trR" secondAttribute="top" id="QA9-bw-Zca"/>
+                <constraint firstItem="nER-13-3ws" firstAttribute="width" secondItem="y8o-0A-trR" secondAttribute="width" id="SJV-nN-UXF"/>
+                <constraint firstItem="9Yr-G3-NQb" firstAttribute="trailing" secondItem="HVv-Uh-tpp" secondAttribute="trailing" id="cVL-YM-hYs"/>
+                <constraint firstItem="HVv-Uh-tpp" firstAttribute="leading" secondItem="9Yr-G3-NQb" secondAttribute="leading" id="fkv-Ry-Qe7"/>
+                <constraint firstItem="ZbU-le-IW0" firstAttribute="leading" secondItem="y8o-0A-trR" secondAttribute="leading" id="h6F-Rf-NGW"/>
+                <constraint firstItem="9Yr-G3-NQb" firstAttribute="bottom" secondItem="ZbU-le-IW0" secondAttribute="bottom" id="shh-Nm-TcE"/>
+                <constraint firstAttribute="trailing" secondItem="ZbU-le-IW0" secondAttribute="trailing" id="xan-th-3T2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="itemsView" destination="ZbU-le-IW0" id="uce-nL-4oW"/>
+            </connections>
+            <point key="canvasLocation" x="-462.31884057971018" y="86.383928571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img-shadow-bottom" width="1" height="1"/>
+    </resources>
+</document>
